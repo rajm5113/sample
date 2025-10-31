@@ -3,36 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Silicon Valley of India</title>
+    <title>Mario-like Platform Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Silicon Valley of India</h1>
-    </header>
-    <main>
-        <section>
-            <h2>About This Page</h2>
-            <p>This is a simple webpage that uses basic HTML to display information about Bengaluru, the Silicon Valley of India</p>
-            <ul>
-                <li>Tech industry growth in Bengaluru</li>
-                <li>Major companies based here</li>
-                <li>Innovation and startups</li>
-            </ul>
-        </section>
+    <div class="game-container">
+        <div class="header">
+            <h1>Mario-like Platform Game</h1>
+            <div class="game-info">
+                <div class="score">Score: <span id="score">0</span></div>
+                <div class="lives">Lives: <span id="lives">3</span></div>
+                <div class="level">Level: <span id="level">1</span></div>
+            </div>
+        </div>
 
-        <section>
-            <h2>Gallery</h2>
-            <p>Here are some beautiful images:</p>
-            <img src="images/download.jpg" alt="Image 1">
-            <img src="images/download (1).jpg" alt="Image 2">
-            <img src="images/download (2).jpg" alt="Image 3">
-        </section>
-    </main>
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
 
-    <footer>
-        <h2>Contact</h2>
-        <p>For more information, visit <a href="https://en.wikipedia.org/wiki/Bangalore" target="_blank">Bengaluru on Wikipedia</a>.</p>
-        <p>&copy; 2024 Silicon Valley of india</p>
-    </footer>
+        <div class="controls">
+            <h3>Controls:</h3>
+            <p><strong>Arrow Keys or A/D:</strong> Move Left/Right</p>
+            <p><strong>Space or W:</strong> Jump</p>
+            <p><strong>R:</strong> Restart Game</p>
+        </div>
+
+        <div id="gameOver" class="game-over hidden">
+            <h2>Game Over!</h2>
+            <p>Final Score: <span id="finalScore">0</span></p>
+            <button id="restartBtn">Restart Game</button>
+        </div>
+
+        <div id="levelComplete" class="level-complete hidden">
+            <h2>Level Complete!</h2>
+            <p>Score: <span id="levelScore">0</span></p>
+            <button id="nextLevelBtn">Next Level</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
 </body>
 </html>
